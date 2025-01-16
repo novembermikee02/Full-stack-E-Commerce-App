@@ -1,6 +1,5 @@
 import 'package:ecommerce_frontend_backend/features/tabs/home_tab/home_screen.dart';
 import 'package:ecommerce_frontend_backend/utils/constant.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CategoryDetails extends StatelessWidget {

@@ -1,4 +1,5 @@
 import 'package:ecommerce_frontend_backend/features/tabs/home_tab/home_screen.dart';
+import 'package:ecommerce_frontend_backend/features/tabs/profile_tab/profile_screen.dart';
 import 'package:ecommerce_frontend_backend/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -16,7 +17,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
     const HomeScreen(),
     const Placeholder(),
     Container(),
-    const Placeholder(),
+    const ProfileScreen(),
   ];
   void _onItemTapped(int index) {
     setState(() {
