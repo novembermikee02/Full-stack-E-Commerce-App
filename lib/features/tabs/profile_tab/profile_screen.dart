@@ -1,6 +1,3 @@
-import 'package:ecommerce_frontend_backend/features/tabs/profile_tab/address_screen.dart';
-import 'package:ecommerce_frontend_backend/features/tabs/profile_tab/payment_screen.dart';
-import 'package:ecommerce_frontend_backend/features/tabs/profile_tab/wishlist_screen.dart';
 import 'package:ecommerce_frontend_backend/utils/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +12,8 @@ class ProfileScreen extends StatelessWidget {
       backgroundColor: whiteColor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             spacing: 20,
             children: [
               const SizedBox(
@@ -31,9 +26,9 @@ class ProfileScreen extends StatelessWidget {
               Container(
                 padding:
                     const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: textFieldColor,
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,21 +38,18 @@ class ProfileScreen extends StatelessWidget {
                       spacing: 4,
                       children: [
                         Text(
-                          'Gilbert Jones',
+                          'Aditya Mike',
                           style: TextStyle(
                             color: blackColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
                         ),
-                        Text('Glbertjones001@gmail.com'),
+                        Text('aditya@gmail.com'),
                         Text('121-224-7890'),
                       ],
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text('Edit'),
-                    ),
+                    TextButton(onPressed: () {}, child: const Text('Edit'))
                   ],
                 ),
               ),
@@ -66,42 +58,15 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   ProfileListTile(
                     title: 'Address',
-                    pageRedirection: () {
-                      Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) {
-                            return const AddressScreen();
-                          },
-                        ),
-                      );
-                    },
+                    pageRedirection: () {},
                   ),
                   ProfileListTile(
                     title: 'Wishlist',
-                    pageRedirection: () {
-                      Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) {
-                            return const WishlistScreen();
-                          },
-                        ),
-                      );
-                    },
+                    pageRedirection: () {},
                   ),
                   ProfileListTile(
                     title: 'Payment',
-                    pageRedirection: () {
-                      Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) {
-                            return const PaymentScreen();
-                          },
-                        ),
-                      );
-                    },
+                    pageRedirection: () {},
                   ),
                   ProfileListTile(
                     title: 'Help',
@@ -114,15 +79,14 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
               TextButton(
-                onPressed: () {},
-                child: const Text(
-                  'Sign Out',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+                  onPressed: () {},
+                  child: const Text(
+                    'Sign Out',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ))
             ],
           ),
         ),
@@ -134,11 +98,8 @@ class ProfileScreen extends StatelessWidget {
 class ProfileListTile extends StatelessWidget {
   final String title;
   final VoidCallback pageRedirection;
-  const ProfileListTile({
-    super.key,
-    required this.title,
-    required this.pageRedirection,
-  });
+  const ProfileListTile(
+      {super.key, required this.title, required this.pageRedirection});
 
   @override
   Widget build(BuildContext context) {
@@ -146,9 +107,9 @@ class ProfileListTile extends StatelessWidget {
       onTap: pageRedirection,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: textFieldColor,
-          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderRadius: BorderRadius.circular(8),
         ),
         child: ListTile(
           title: Text(title),

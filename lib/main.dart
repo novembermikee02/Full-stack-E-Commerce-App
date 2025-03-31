@@ -1,3 +1,4 @@
+import 'package:ecommerce_frontend_backend/features/auth/signin_screen.dart';
 import 'package:ecommerce_frontend_backend/features/tabs/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: BottomNavbar(),
+      home: SigninScreen(),
     );
   }
 }
